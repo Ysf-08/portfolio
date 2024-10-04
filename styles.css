@@ -1,0 +1,277 @@
+/* Style de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Couleur d'arrière-plan plus claire */
+    color: #333;
+}
+
+/* Header moderne */
+.header {
+    background-color: #154992; /* Fond sombre pour le header */
+    color: white;
+    padding: 1em 2em; /* Plus d'espacement */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(246, 244, 244, 0.944);
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .logo {
+    font-size: 2rem; /* Taille de police augmentée */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement plus large */
+    transition: color 0.3s;
+}
+
+.header .logo:hover {
+    color: #59d659b9; /* Accent doré au survol */
+}
+
+.header .nav {
+    display: flex;
+    gap: 2em; /* Plus d'espace entre les liens */
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Taille de police augmentée */
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transition pour l'effet de survol */
+}
+
+.header .nav a:hover {
+    background-color: #59d659b9; /* Accent doré au survol */
+    color: #1a1a1a; /* Couleur de texte au survol */
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* Sections */
+.about-me {
+    background: linear-gradient(135deg, #4e96e2, #2e4e7d);
+    color: white;
+    padding: 2em; /* Plus d'espacement */
+    text-align: center;
+    margin-top: 60px; /* Espacement pour le header fixe */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-me h1 {
+    font-size: 2.5rem; /* Taille de police augmentée */
+    margin-bottom: 1rem; /* Plus d'espacement */
+}
+
+.about-me p {
+    font-size: 1rem; /* Taille de police augmentée */
+    line-height: 1.6; /* Meilleure lisibilité */
+}
+
+/* Sections technologies, outils et SGBD */
+.skills, .tools, .databases {
+    margin: 2em auto; /* Plus d'espace vertical */
+    padding: 2em; /* Plus d'espacement */
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px; /* Coins arrondis plus marqués */
+    max-width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills:hover, .tools:hover, .databases:hover {
+    transform: translateY(-8px); /* Effet de levée */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Ombrage plus prononcé */
+}
+
+/* Logos circulaires et en couleur */
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    width: 70px; /* Taille augmentée pour les logos */
+    height: 70px; /* Hauteur identique à la largeur */
+    border-radius: 50%;
+    margin: 15px; /* Plus d'espacement entre les logos */
+    transition: transform 0.4s, filter 0.3s;
+    object-fit: cover;
+}
+
+/* Effet de survol des logos */
+.logos img:hover {
+    transform: scale(1.15); /* Zoom léger au survol */
+}
+
+/* Cartes des projets */
+.projects {
+    margin: 3em auto; /* Plus d'espace vertical */
+    padding: 2em; /* Plus d'espacement */
+    text-align: center;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em; /* Plus d'espace entre les cartes */
+    margin-top: 2em; /* Plus d'espace au-dessus */
+}
+
+.card {
+    background-color: white;
+    padding: 1.5em; /* Plus d'espacement interne */
+    width: 220px; /* Légèrement plus large */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05); /* Effet de levée plus marqué */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a; /* Fond sombre pour le footer */
+    color: white;
+    padding: 2em 0; /* Plus d'espacement */
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+footer h3 {
+    margin-bottom: 1em; /* Plus d'espacement */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Plus d'espace entre les icônes */
+}
+
+.social-links img {
+    width: 35px; /* Taille augmentée pour les icônes */
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.4s, filter 0.3s;
+    object-fit: cover;
+}
+
+.social-links img:hover {
+    transform: scale(1.3); /* Zoom au survol */
+}
+
+/* Keyframes pour animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .nav {
+        flex-direction: column;
+        gap: 1em; /* Espace entre les liens */
+        padding: 1em 0; /* Espacement autour des liens */
+    }
+
+    .header .logo {
+        font-size: 1.5rem; /* Taille réduite pour le logo */
+    }
+
+    .about-me h1 {
+        font-size: 2rem; /* Taille de police réduite */
+    }
+
+    .about-me p {
+        font-size: 0.9rem; /* Taille de police réduite */
+    }
+
+    .skills, .tools, .databases {
+        padding: 1.5em; /* Réduire le remplissage */
+    }
+
+    .skills h2, .tools h2, .databases h2 {
+        font-size: 1.5rem; /* Taille de police réduite pour les titres */
+    }
+
+    .logos img {
+        width: 50px; /* Réduire la taille des logos */
+        height: 50px;
+    }
+
+    .card {
+        width: 90%; /* Largeur maximale des cartes sur mobile */
+        padding: 1em; /* Réduire le remplissage interne */
+    }
+
+    footer h3 {
+        font-size: 1.2rem; /* Taille de police réduite pour le footer */
+    }
+
+    footer .social-links img {
+        width: 30px; /* Réduire la taille des icônes */
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .nav a {
+        font-size: 1rem; /* Taille de police réduite pour les liens de navigation */
+        padding: 0.4em 0.8em; /* Réduire le remplissage */
+    }
+
+    .about-me h1 {
+        font-size: 1.8rem; /* Taille de police encore plus réduite */
+    }
+
+    .about-me p {
+        font-size: 0.85rem; /* Réduire la taille du texte */
+    }
+
+    .skills h2, .tools h2, .databases h2 {
+        font-size: 1.3rem; /* Taille de police réduite pour les titres */
+    }
+
+    .project-cards {
+        flex-direction: column; /* Disposition verticale pour les cartes de projet */
+        align-items: center; /* Centrer les cartes */
+    }
+}
